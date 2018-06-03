@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
+import styled from 'react-emotion'
+
+const Link = styled('a')`
+  color: red;
+`;
 
 interface PropsType {
     name: string
@@ -43,7 +48,10 @@ export class App extends React.Component<PropsType> {
         const { name } = this.props;
 
         return (
-            <div> App komponent3 - { name } - { rr.count } </div>
+            <div ggg="fsdfds">
+                App komponent3 - { name } - { rr.count }
+                <Link href="#" aa="dasda">Click me</Link>
+            </div>
         );
     }
 }
