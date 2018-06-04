@@ -42,6 +42,10 @@ const rr = new RR();
 
 //fff(tt);
 //fff("31321a");
+interface RectodType {
+    a: 'a' | 'b',
+    b: string | number,
+}
 
 @observer
 export class App extends React.Component<PropsType> {
@@ -50,17 +54,22 @@ export class App extends React.Component<PropsType> {
 
         const aa: List<number> = List();
         aa.sizea;
+        aa.length;
         const bb = aa.push(1);
         const cc = bb.push(2);
         const dd = cc.push('a');
 
-        const def = Record({
-            a: '',
-            b: ''
+        const defaultValues: RectodType = {
+            a: 'a',
+            b: 1
+        };
+
+        const def = Record(defaultValues);
+
+        const lll = new def({
+            a: 'a',
+            b: true
         });
-
-
-        const lll = new def();
 
         console.info('AAA', lll.a);
         console.info('BBB', lll.b);
